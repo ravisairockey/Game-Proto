@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -108,6 +108,224 @@
                 <iframe loading="lazy" src="https://www.canva.com/design/DAGY7WOBRXw/f2Ex3bdI36j5u-Mg3-yvZQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
             </div>
             <p><a href="https://www.canva.com/design/DAGY7WOBRXw/f2Ex3bdI36j5u-Mg3-yvZQ/view?utm_content=DAGY7WOBRXw&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener">View on Canva</a></p>
+        </div>
+    </div>
+</body>
+</html>
+ -->
+
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Project Showcase</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: #1a1a2e; /* Deep navy for sophistication */
+            color: #e0e0e0; /* Soft off-white for readability */
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Starfield Background */
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);
+            background-size: 4px 4px;
+            animation: twinkle 3s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.7; transform: scale(0.98); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px;
+            background: rgba(34, 34, 54, 0.95); /* Subtle dark purple overlay */
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                       box-shadow 0.4s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #00d4ff; /* Vibrant cyan accent */
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+            transition: letter-spacing 0.3s ease, color 0.3s ease;
+        }
+        h1:hover {
+            letter-spacing: 1px;
+            color: #00eaff;
+        }
+
+        p.subtitle {
+            font-size: 1.2em;
+            color: #a0a0cc; /* Soft lavender for contrast */
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #ff6b6b; /* Warm coral for emphasis */
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+        .project:hover h2 {
+            transform: translateX(5px);
+        }
+
+        /* Buttons and Links */
+        .github-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #00d4ff;
+            color: #1a1a2e;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .github-btn:hover {
+            background: #ff6b6b;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        a.project-link {
+            color: #00d4ff;
+            font-weight: 600;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        a.project-link:hover {
+            color: #ff6b6b;
+            transform: translateX(3px);
+        }
+
+        /* Project Cards */
+        .project {
+            margin: 30px 0;
+            padding: 25px;
+            background: rgba(44, 44, 70, 0.9); /* Slightly lighter purple */
+            border-radius: 12px;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                       box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .embed-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 56.25%;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: filter 0.3s ease;
+        }
+        .project:hover .embed-container {
+            filter: brightness(1.1);
+        }
+
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            border: none;
+        }
+
+        /* Game Icons */
+        .games-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .game-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 16px;
+            font-weight: 500;
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+        }
+        .game-icon:hover {
+            transform: scale(1.15) rotate(8deg);
+            background: #00d4ff;
+            color: #1a1a2e;
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <h1>Game Project Showcase</h1>
+        <p class="subtitle">Explore my latest game development creations</p>
+        
+        <a href="https://github.com/ravisairockey" target="_blank" class="github-btn">GitHub Profile</a>
+
+        <div class="games-container">
+            <a href="https://ravisairockey.github.io/EndlessRunner/" target="_blank" class="game-icon">Runner</a>
+            <a href="https://ravisairockey.github.io/Aim-Trainer.github.io/" target="_blank" class="game-icon">Aim</a>
+            <a href="https://ravisairockey.github.io/stack-game.github.io/" target="_blank" class="game-icon">Stack</a>
+            <a href="https://ravisairockey.github.io/sprit.rsv.github.io/" target="_blank" class="game-icon">Sprint</a>
+        </div>
+
+        <div class="project">
+            <h2>Unity Game Level</h2>
+            <div class="embed-container">
+                <iframe loading="lazy" src="https://www.canva.com/design/DAGY7CNbUxQ/f9V36WdFFvCxvS4_qffdqw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+            </div>
+            <p><a href="https://www.canva.com/design/DAGY7CNbUxQ/f9V36WdFFvCxvS4_qffdqw/view?utm_content=DAGY7CNbUxQ&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" class="project-link">View Presentation</a></p>
+        </div>
+        
+        <div class="project">
+            <h2>Unreal Engine Level</h2>
+            <div class="embed-container">
+                <iframe loading="lazy" src="https://www.canva.com/design/DAGY7WOBRXw/f2Ex3bdI36j5u-Mg3-yvZQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+            </div>
+            <p><a href="https://www.canva.com/design/DAGY7WOBRXw/f2Ex3bdI36j5u-Mg3-yvZQ/view?utm_content=DAGY7WOBRXw&utm_campaign=designshare&utm_medium=embeds&utm_source=link" target="_blank" rel="noopener" class="project-link">View Presentation</a></p>
         </div>
     </div>
 </body>
