@@ -292,6 +292,27 @@
             filter: drop-shadow(0 0 20px rgba(247, 37, 133, 0.8));
         }
 
+        /* Retro Arcade Icon */
+        .game-icon.retro-icon:hover {
+            box-shadow: 
+                0 15px 40px rgba(255, 215, 0, 0.4),
+                inset 0 0 20px rgba(255, 215, 0, 0.3);
+            border-color: rgba(255, 215, 0, 0.6);
+        }
+
+        .game-icon.retro-icon::after {
+            background: radial-gradient(
+                circle at center,
+                rgba(255, 215, 0, 0.5) 0%,
+                transparent 70%
+            );
+        }
+
+        .game-icon.retro-icon:hover i {
+            color: gold;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.8));
+        }
+
         /* Tooltip */
         .tooltip {
             position: absolute;
@@ -514,6 +535,11 @@
                 <i class="fas fa-tachometer-alt"></i>
                 <span>Sprint</span>
                 <div class="tooltip">Speed Game</div>
+            </a>
+            <a href="https://ravisairockey.github.io/Retro-Arcade/" class="game-icon retro-icon">
+                <i class="fas fa-gamepad"></i>
+                <span>Retro</span>
+                <div class="tooltip">Retro Arcade</div>
             </a>
         </div>
 
